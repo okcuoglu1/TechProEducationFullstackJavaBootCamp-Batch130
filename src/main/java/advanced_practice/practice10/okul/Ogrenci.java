@@ -1,11 +1,9 @@
 package advanced_practice.practice10.okul;
 
 public class Ogrenci {
-
-  private  String ad;
-  private  String soyAd;
-  private   int yas;
-
+    private String ad;
+    private String soyAd;
+    private int yas;
 
     public Ogrenci(String ad, String soyAd, int yas) {
         this.ad = ad;
@@ -14,8 +12,8 @@ public class Ogrenci {
     }
 
     public Ogrenci() {
-    }
 
+    }
 
     public String getAd() {
         return ad;
@@ -40,7 +38,6 @@ public class Ogrenci {
     public void setYas(int yas) {
         this.yas = yas;
     }
-
 
     @Override
     public String toString() {

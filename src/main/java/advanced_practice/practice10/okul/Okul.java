@@ -4,11 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Okul {
-
     private String okulAdi;
     private int maxOgrenciSayisi;
-    private List<Ogrenci> ogrenciListesi = new ArrayList<>();
+    private List<Ogrenci> ogrenciListesi = new ArrayList();
 
+    public Okul(String okulAdi, int maxOgrenciSayisi, List<Ogrenci> ogrenciListesi) {
+        this.okulAdi = okulAdi;
+        this.maxOgrenciSayisi = maxOgrenciSayisi;
+        this.ogrenciListesi = ogrenciListesi;
+    }
+
+    public Okul() {
+    }
 
     public String getOkulAdi() {
         return okulAdi;
@@ -34,14 +41,8 @@ public class Okul {
         this.ogrenciListesi = ogrenciListesi;
     }
 
-
-    public Okul(String okulAdi, int maxOgrenciSayisi, List<Ogrenci> ogrenciListesi) {
-        this.okulAdi = okulAdi;
-        this.maxOgrenciSayisi = maxOgrenciSayisi;
-        this.ogrenciListesi = ogrenciListesi;
-    }
-
-    public Okul() {
+    public void addOgrenciToList(Ogrenci ogrenci){
+        this.ogrenciListesi.add(ogrenci);
     }
 
     @Override
