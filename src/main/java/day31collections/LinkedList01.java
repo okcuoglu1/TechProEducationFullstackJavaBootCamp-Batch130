@@ -5,36 +5,22 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class LinkedList01 {
-
     /*
-
-    1/*
-1)interface'lerden object olusturulamaz cunku interface'lerin constructor'i yoktur.
-2)Abtrack Class'lardan object olusturulamaz, constructor'ları vardir ama constructor object olusturmada
-  kullanilamaz.
-3)interface'larin constructor'lari olmadigindan collection olustururken interface isimleri "new" keyword'undan sonra
-  kullanilamaz.
-4)class---->class yaparken extends kullaniriz.
-  class---->interface yaparken implements kullaniriz
-  interface--->interface yapmak icin extends kullanmamiz gerekir.
-  interface---->class mumkun degildir.
- 5)ArrayList'ler eleman silme ve eleman eklemede basarisizdirlar o yuzden eleman silme ve ekleme islemleri coklukla
-   yapilacaksa ArrayList kullanmak tavsiye edilmez.
- 6)LinkedList'lerde eleman yerine "Node" kelimesi kullanilir. En bastaki Node'a "Head", en sondaki Node'a "Tail" denir.
- 7)LinkedList'ler yapiları dolayisiyla index kullanmadıklarından, eleman silmede ve eklemede re-index yapilmasına gerek yoktur.
-   Bu da LinkedList'leri eleman ekleme ve silmede çok başarılı hale getirir, bu yüzden eleman ekleme ve silmenin çok yapılması
-   gereken durumlarda LinkedList kullanmak tavsiye edilir.
-8)LinkedList'lerde "search" islemi zor yapilir cunku LinkedList'ler index kullanmaz index kullanmayinca herhangi
-bir elemani bulmak icin en bastan tum elemanlar kontrol edilir bu da cok fazla is demektir.
-
-      Note: ArrayLists'ler eleman ekleme ve eleman silme konusunda başarısızdırlar.
-       Bu yüzden yapılacak application'da fazlaca eleman eklenip çıkarılacaksa ArrayList kullanılması tavsie edilmez.
-       Java Bu tarz işlemler için LinkedList'i oluşturmuştur.
-       LinkedList index kullanmadığı için eleman ekleme ve çıkarma işlemini oldukça kolay yapar.
-
-       //LINLEDLIST ==> Eleman silme-ekleme cok basarilidir. Index kullanmaz.
-      //LINKEDLIST lerde eleman kelimesi yerine "NODE" denir. LinkedList bas Node manasinda "HEAD", son Node "TAIL" denir.
-        head'in pointerı ilk "node" u gösterir. tatil'in pointerı null
+             1)interface'lerden object olusturulamaz cunku interface'lerin constructor'i yoktur.
+             2)Abstract Class'lardan object olusturulamaz, constructor'lari vardir ama constructor object olusturmada kullanilamaz.
+             3)interface'lerin constructor'lari olmadigindan collection olustururken interface isimleri "new" keyword'unden sonra kullanilamaz.
+             4)*class --> class ==> extends
+              class --> interface ==> implements
+              *interface --> interface ==> extends
+              interface --> class ==> Bu mumkun degildir.
+             5)ArrayList'ler eleman silme ve eleman eklemede basarisizdirlar. O yuzden eleman silme ve ekleme islemleri coklukla
+             yapilacaksa ArrayList kullanmak tavsiye edilmez.
+             6)LinkedList'ler index kulanmadiklarindan eleman silme ve eklemede re-index yapilmasina gerek yoktur. Bu da LinkList
+             leri eleman ekleme ve silmede cok basarili hale getirir. Bu yuzden eleman ekleme ve silmenin cok yapilmasi gereken
+             durumlarda LinkList kullanmak tavsiye edilir.
+             7)ArrayList'lerde "search" islemi kolay yapilir cunku index'ler adres gibidir.
+             8)LinkedList'lerde "search" islemi zor yapilir cunku LinkedList'ler index kullanmaz index kullanmayinca herhangi
+             bir elemani bulmak icin en bastan tum elemanlar kontrol edilir bu da cok fazla is demektir.
      */
 
     public static void main(String[] args) {
