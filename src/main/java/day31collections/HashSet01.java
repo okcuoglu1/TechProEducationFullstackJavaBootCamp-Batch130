@@ -14,9 +14,11 @@ public class HashSet01 {
                               yani; HashSet'lere eklenen elemanlar rastgele siralanirlar.
                            b)HashSet'ler tekrarli elemana musaade etmezler.
                            c)HashSet'ler sadece 1 tane "null" i eleman olarak kabul ederler.
+
                 ii)LinkedHashSet: a)LinkedHashSet elemanlari "insertion order" a gore dizer.
                                   b)LinkedHashSet elemanlari siralamakta zaman kaybettigini icin, HashSet'e gore yavastir.
                                   c)LinkedHashSet'ler tekrarli elemana musaade etmezler.
+
                 iii)TreeSet: a)TreeSet elemanlari "natural order"(Kucukten buyuge veya alfabetik sira) a gore dizer.
                              b)TreeSet, "natural order" yaparken cok zaman harcar o yuzden en yavas "Set" dir.
                              c)TreeSet'ler tekrarli elemana musaade etmezler.
