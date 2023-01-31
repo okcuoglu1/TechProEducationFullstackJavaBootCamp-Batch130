@@ -55,6 +55,7 @@ public class HashMaps01 {
       System.out.println(sum);
 
       //HashMap'lerde belirli bir "key" nin "value" sunu nasil alabiliriz?
+      //O key yoksa "null" verir.
       Integer usaPopulation = hm.get("USA");
       System.out.println(usaPopulation);// 400000000
 
