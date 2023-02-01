@@ -1,5 +1,9 @@
 package day34mapsiterators;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 public class Iterators01 {
 
     /*
@@ -14,21 +18,35 @@ public class Iterators01 {
 
     Iki tip Iterator vardır;
     i) Iterator: Sadece elemanlari remove edebilirsiniz.
+                 Sadece soldan saga calısır yani tek yonludur.
+    ii) ListIterator: Elemani remove etme ve update etme yapabilirsiniz.
+                      Hem soldan saga hem de sagdan sola calisabilir. Yani çift yönlüdür.
 
 
 
      */
 
 
-
-
-
-
-
-
-
-
     public static void main(String[] args) {
+
+        List<String> list1 = new ArrayList<>();
+        list1.add("Ali");
+        list1.add("Can");
+        list1.add("Aliye");
+
+        Iterator<String> itr1 = list1.iterator();
+
+        while (itr1.hasNext()){
+
+            itr1.next();
+
+          itr1.remove();
+
+        }
+
+
+
+
 
     }
 
