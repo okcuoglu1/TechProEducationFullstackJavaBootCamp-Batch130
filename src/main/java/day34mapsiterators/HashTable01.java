@@ -24,15 +24,7 @@ public class HashTable01 {
         System.out.println(ht); //{6=8, 2=4, 1=2}
 
 
-
-
-
     }
-
-
-
-
-
 
 
 }
