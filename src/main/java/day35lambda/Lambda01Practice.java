@@ -23,7 +23,8 @@ public class Lambda01Practice {
         printEvenElements2(nums);
         System.out.println();
         printSquareOfOddElements(nums);
-
+        System.out.println();
+        printCubeOfDistinctOddElements(nums);
 
     }
 
@@ -46,6 +47,20 @@ public class Lambda01Practice {
                 filter(t->t%2!=0).
                 map(t->t*t).
                 forEach(t-> System.out.print(t + " "));
+    }
+
+    public static void printCubeOfDistinctOddElements(List<Integer> nums){
+
+
+        nums.
+                stream().
+                distinct().
+                filter(t->t%2!=0).
+                map(t->t*t*t).
+                forEach(t-> System.out.print(t + " "));
+
+
+
     }
 
 
