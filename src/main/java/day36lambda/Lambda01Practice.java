@@ -36,6 +36,8 @@ public class Lambda01Practice {
         printAllAlphabeticallyLowerDistinct(list);
         System.out.println();
         printAllSortWithLengthUpperDistinct(list);
+        System.out.println();
+        printAllSortWithLengthUpperDistinctSameLengthsInAlphabeticalOrder(list);
 
 
     }
@@ -84,6 +86,16 @@ public class Lambda01Practice {
 //           Uzunluklari ayni olan elemanlar alfabetik sirada olsunlar.
 
     public static void printAllSortWithLengthUpperDistinctSameLengthsInAlphabeticalOrder(List<String> list){
+
+        list.
+                stream()
+                .distinct()
+                .map(String::toUpperCase)
+                .sorted(Comparator.comparing(String::length).thenComparing(Comparator.naturalOrder()))
+                .forEach(System.out::println);
+
+
+
 
     }
 
