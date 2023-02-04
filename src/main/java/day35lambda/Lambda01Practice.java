@@ -25,6 +25,10 @@ public class Lambda01Practice {
         printSquareOfOddElements(nums);
         System.out.println();
         printCubeOfDistinctOddElements(nums);
+        System.out.println();
+        printSumOfSquaresOfDistinctEvenElements(nums);
+        System.out.println();
+        printProductOfSquaresOfDistinctEvenElements(nums);
 
     }
 
@@ -59,9 +63,28 @@ public class Lambda01Practice {
                 map(t->t*t*t).
                 forEach(t-> System.out.print(t + " "));
 
+    }
 
+    public static void printSumOfSquaresOfDistinctEvenElements(List<Integer> nums){
+
+        Integer sum = nums.stream().distinct().filter(t->t%2==0).map(t->t*t).reduce(0,(t,u)->t+u);
+
+        System.out.println(sum);
 
     }
+
+
+    public static void printProductOfSquaresOfDistinctEvenElements(List<Integer> nums){
+
+        Integer product = nums.stream().distinct().filter(t->t%2==0).map(t->t*t).reduce(1,(t,u)->t*u);
+        System.out.println(product);
+
+    }
+
+
+
+
+
 
 
 }

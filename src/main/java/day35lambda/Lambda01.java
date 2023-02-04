@@ -35,6 +35,7 @@ public class Lambda01 {
         nums.add(4);
         nums.add(12);
         nums.add(15);
+        nums.add(12);
 
         printElements1(nums);
         System.out.println();
@@ -131,7 +132,7 @@ public class Lambda01 {
         System.out.println(sum);
     }
 
-    //8)Create a method to calculate the "product" of the "square" of "distinct" "even" elements
+    //8)Create a method to calculate the "product" of the "square " of "distinct" "even" elements
     public static void printProductOfSquareOfDistinctEvenElements(List<Integer> nums){
         Integer product = nums.stream().distinct().filter(t->t%2==0).map(t->t*t).reduce(1, (t,u)->t*u);
         System.out.println(product);
@@ -165,6 +166,7 @@ public class Lambda01 {
     }
 
     //2.Yol:
+    //reduce((t,u)->u) bu durumda; iki elemandan hep ikinciyi seç diyoruz.
     public static void getMinValue2(List<Integer> nums){
         Integer min = nums.stream().distinct().sorted(Comparator.reverseOrder()).reduce((t,u)->u).get();
         System.out.println(min);
