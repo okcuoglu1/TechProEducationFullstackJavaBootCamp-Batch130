@@ -34,6 +34,8 @@ public class Lambda01Practice {
         printAllAlphabeticallyUpperDistinct(list); //AJDA ANGELINA BRAD CUNEYT JOHN TOM
         System.out.println();
         printAllAlphabeticallyLowerDistinct(list);
+        System.out.println();
+        printAllSortWithLengthUpperDistinct(list);
 
 
     }
@@ -59,9 +61,35 @@ public class Lambda01Practice {
 
     }
 
-    //Example 4: Tum list elemanlarini buyuk harfle, uzunluklarina artan sirada, tekrarsiz olarak yazdiriniz
+    //Example 4: Tum list elemanlarini buyuk harfle, uzunluklarina artan sirada, tekrarsiz olarak yazdiriniz.
     public static void printAllSortWithLengthUpperDistinct(List<String> list){
 
+        list.stream().distinct().map(t->t.toUpperCase()).sorted(Comparator.comparing(t->t.length())).forEach(t-> System.out.print(t + " "));
     }
+
+    //Example 5: Tum list elemanlarini buyuk harfle, son harflerine gore artan sirada, tekrarsiz olarak yazdiriniz.
+    public static void printAllSortWithLastCharUpperDistinct(List<String> list){
+
+        list.stream().
+                distinct().
+                map(t->t.toUpperCase()).
+                sorted(Comparator.comparing(t->t.charAt(t.length()-1))).
+                forEach(t-> System.out.print(t + " "));
+
+
+
+    }
+
+//Example 6: Tum list elemanlarini buyuk harfle, uzunluklarina gore artan sirada, tekrarsiz olarak yazdiriniz
+//           Uzunluklari ayni olan elemanlar alfabetik sirada olsunlar.
+
+    public static void printAllSortWithLengthUpperDistinctSameLengthsInAlphabeticalOrder(List<String> list){
+
+    }
+
+
+
+
+
 
 }
