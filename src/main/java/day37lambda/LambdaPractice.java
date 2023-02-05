@@ -3,6 +3,7 @@ package day37lambda;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class LambdaPractice {
 
@@ -31,10 +32,18 @@ public class LambdaPractice {
         String name1 = coursesList.stream().
                 sorted(Comparator.comparing(Course::getAverageScore).
                         reversed()).
-                findFirst().
-                get().
-                getCourseName();
+                        findFirst().
+                        get().
+                        getCourseName();
+        System.out.println(name1);
 
+        //4)Tum course object'lerini average score'a gore kucukten buyuge diziniz ve ilk ikisi haric liste halinde console'a yazdiriniz.
+
+       List<Course> myList = coursesList.
+                stream().
+                sorted(Comparator.comparing(Course::getAverageScore)).
+                skip(2). //İlk ikisini es geç demek
+                collect(Collectors.toList());
 
 
     }
