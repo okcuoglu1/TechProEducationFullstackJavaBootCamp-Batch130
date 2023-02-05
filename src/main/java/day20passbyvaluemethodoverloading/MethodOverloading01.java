@@ -11,6 +11,7 @@ public class MethodOverloading01 {
 
         3)Java icin "ismi" ve "parametreleri" ayni olan iki method tamamiyla aynidir.
           Bu yuzden "ismi" ve "parametre" "Method Signature" olarak adlandirilir.
+
         4)Method Overloading olustururken return type'i degistirmenin hicbir etkisi yoktur.
           Method Overloading olustururken access modifier'i degistirmenin hicbir etkisi yoktur.
           Method Overloading olustururken method'u static veya non-static yapmanin hicbir etkisi yoktur.
@@ -25,6 +26,8 @@ public class MethodOverloading01 {
      */
     public static void main(String[] args) {
         add(3, 5);
+        add(2);
+
     }
 
     private static void add(int a, int b){
@@ -41,6 +44,10 @@ public class MethodOverloading01 {
     }
     private static void add(int a, int b, int c){
         System.out.println(a+b+c);
+    }
+
+    public static void add(double a){
+        System.out.println(a*a);
     }
 
 
