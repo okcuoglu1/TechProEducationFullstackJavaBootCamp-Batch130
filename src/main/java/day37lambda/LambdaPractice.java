@@ -44,8 +44,22 @@ public class LambdaPractice {
                 sorted(Comparator.comparing(Course::getAverageScore)).
                 skip(2). //İlk ikisini es geç demek
                 collect(Collectors.toList());
+        System.out.println(myList);
 
 
+        //5)Tum course object'lerini average score'a gore kucukten buyuge diziniz ve ilk ucunu liste halinde console'a yazdiriniz.
+        List<Course> yourList = coursesList.
+                stream().
+                sorted(Comparator.comparing(Course::getAverageScore)).
+                limit(3).
+                collect(Collectors.toList());
+        System.out.println(yourList);
+
+        //6)Tum course object'lerini average score'a gore kucukten buyuge diziniz ve ucuncuyu liste halinde console'a yazdiriniz.
+        Course result5 = coursesList.
+                stream().
+                sorted(Comparator.comparing(Course::getAverageScore)).skip(2).limit(1).findFirst().get();
+        System.out.println(result5);
     }
 
 
