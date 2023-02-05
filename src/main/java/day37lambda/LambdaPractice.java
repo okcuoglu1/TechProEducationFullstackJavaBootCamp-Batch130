@@ -1,6 +1,7 @@
 package day37lambda;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class LambdaPractice {
@@ -22,6 +23,17 @@ public class LambdaPractice {
         boolean result1 = coursesList.stream().allMatch(t->t.getAverageScore()>91);
         System.out.println(result1);
 
+        //2)Kurs isimlerinden en az birinin "Turkish" kelimesini icerip icermedigini kontrol eden kodu yaziniz.
+        boolean result2 = coursesList.stream().anyMatch(t->t.getCourseName().contains("Turkish"));
+        System.out.println(result2);
+
+        //3)Average score'u en yuksek olan kursun ismini console'a yazdiran kodu yaziniz.
+        String name1 = coursesList.stream().
+                sorted(Comparator.comparing(Course::getAverageScore).
+                        reversed()).
+                findFirst().
+                get().
+                getCourseName();
 
 
 
