@@ -1,5 +1,7 @@
 package day37lambda;
 
+import day36lambda.Utils;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.IntStream;
@@ -21,6 +23,8 @@ public class Lambda01 {
         System.out.println(getMultiplicationFromThreeToNine());
         System.out.println(getMultiplicationFromThreeToNine2());
         System.out.println(getFactorial(5));
+        System.out.println(getSumOfEvensBetweenTwoInt(5,14));
+        System.out.println(getSumOfDigitBetweenToInts(12,18));
 
     }
 
@@ -68,7 +72,34 @@ public class Lambda01 {
 
     }
 
+    //5)Size verilen iki tamsayi arasindaki tum cift sayilarin toplamini veren kodu yaziniz.
 
+    public static int getSumOfEvensBetweenTwoInt(int a, int b){
+        //İlk sayı kücük olması gerektiği icin swap yapıyoruz.
+        if (a>b){
+            int temp = a;
+            a=b;
+            b=temp;
+        }
+
+    //a+1 ilk sayı dahil olmadıgı icin arasında dedigimizde
+   return IntStream.range(a+1,b).filter(Utils::isNumberEven).reduce(Math::addExact).getAsInt();
+
+    }
+
+    //6)Size verilen iki tamsayi arasindaki tum tamsayilarin rakamlari toplamini verekn kodu yaziniz.
+    public static int getSumOfDigitBetweenToInts(int a, int b){
+        //İlk sayı kücük olması gerektiği icin swap yapıyoruz.
+        if (a>b){
+            int temp = a;
+            a=b;
+            b=temp;
+        }
+
+
+        return IntStream.range(a+1,b).map(Utils::getSumOfDigits).sum();
+
+    }
 
 
 
