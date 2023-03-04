@@ -37,7 +37,29 @@ public class Iterators01 {
             itr1.next();
             itr1.remove();
         }
+
         System.out.println(list1);// []
+
+      List<Integer> myList = new ArrayList<>();
+      myList.add(3);
+      myList.add(5);
+      myList.add(7);
+      myList.add(10);
+
+      Iterator<Integer> myItr = myList.iterator();
+
+      while (myItr.hasNext()){
+
+          System.out.println(myItr.next());
+      }
+
+        System.out.println(myList);
+
+
+
+
+
+
 
         //ListIterator
         //Example 1:
