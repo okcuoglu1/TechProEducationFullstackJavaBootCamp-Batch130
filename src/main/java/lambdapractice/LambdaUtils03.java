@@ -9,6 +9,13 @@ public class LambdaUtils03 {
     }
 
 
+    public static int toplaminiYazdir(int a, int b){
+
+        return a + b;
+
+
+    }
+
 
 
 

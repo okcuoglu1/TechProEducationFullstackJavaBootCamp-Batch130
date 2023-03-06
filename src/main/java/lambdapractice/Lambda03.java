@@ -20,6 +20,8 @@ public class Lambda03 {
         descendingOrder(sayi);
         System.out.println("\n***********");
         pozitifKupBirlerBas(sayi);
+        System.out.println("\n***********");
+        toplaminiBulMethRef(sayi);
 
     }
 
@@ -55,6 +57,14 @@ public class Lambda03 {
 
         sayi.stream().filter(t->t>0).map(t->t*t*t).filter(t->t%10==5).forEach(t-> System.out.print(t + " "));
 
+
+    }
+
+    //6-List elemanlarinin method references ile toplamını bulun ve yazdırın
+    public static void toplaminiBulMethRef(List<Integer> sayi){
+
+        int toplam = sayi.stream().reduce(LambdaUtils03::toplaminiYazdir).get();
+        System.out.println(toplam);
 
     }
 
