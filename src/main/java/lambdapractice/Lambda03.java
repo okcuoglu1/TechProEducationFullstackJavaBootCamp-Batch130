@@ -18,6 +18,8 @@ public class Lambda03 {
         kareYazdir(sayi);
         System.out.println("\n***********");
         descendingOrder(sayi);
+        System.out.println("\n***********");
+        pozitifKupBirlerBas(sayi);
 
     }
 
@@ -45,6 +47,13 @@ public class Lambda03 {
     public static void descendingOrder(List<Integer> sayi){
 
         sayi.stream().sorted(Comparator.reverseOrder()).forEach(t-> System.out.print(t + " "));
+
+    }
+
+    //5-List elemanlarinin pozitif olanlarının, kuplerini bulup, birler basamagı 5 olanları yazdırınız.
+    public static void pozitifKupBirlerBas(List<Integer> sayi){
+
+        sayi.stream().filter(t->t>0).map(t->t*t*t).filter(t->t%10==5).forEach(t-> System.out.print(t + " "));
 
 
     }
